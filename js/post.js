@@ -1,13 +1,13 @@
 // 1 . Selecionar os elementos do html
 // Que vai ser o forms
-const form = document.querySelector("#for-atleta");
+const form = document.querySelector("#form-atleta");
 
 const resposta = document.querySelector("#resposta");
 
 // 2 . Comunicacao com a API
 // Lembrete o codeverse tem APIKey ou seja senha nas req.
 
-const apiKey = "cv_YqERVbUjm-5_JDG_dRqaqBMGHbjKELxABT7uNN_aS2S8fKO87_3FemL7vBNtbfEj";
+const apiKey = "cv_VgZLs_7Sn4flBP_dZkXD72rLu1ILKiUG4IWm6cBtpaApZU4YZp7jz8xzWiDPOobL";
 
 // Tem que falar o link (endpoint)
 const apiUrl = "https://api-ds.codeverse.dev.br/api/atletas";
@@ -24,12 +24,12 @@ form.addEventListener("submit", async function (event) {
 
   //organizar esse objeto e  montar
 
- const atletas = {
+ const atleta = {
       title: dados.get("title"),
-      nome_esporte: dados.get("esporte"),
+      esporte: dados.get("esporte"),
       pais: dados.get("pais"),
       idade: dados.get("idade"),
-      conquista: dados.get("conquista"),
+      conquistas: dados.get("conquistas"),
       imageUrl: dados.get("imageUrl") || null
   }
 
@@ -51,7 +51,7 @@ try {
 
     //enviar os dados
 
-    body: JSON.stringify(atletas),
+    body: JSON.stringify(atleta),
   });
 
   const texto = await respostaApi.text();
@@ -73,4 +73,4 @@ try {
   console.error(error);
 }
 
-})
+});

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Lista de Atletas</title>
+    <link rel="stylesheet" href="../css/get.css" />
+    <script src="../js/get.js" defer></script>
+  </head>
+  <body>
+    <header>
+        <h1>Lista de Atletas</h1>
+        <p>Confira os atletas cadastrados abaixo!!!</p>
+    </header>
+    <main>
+        <p><a href="../index.html">Cadastrar novo atleta</a></p>
+        <section id="container-titulo-lista">
+            <h2 id="titulo-lista">Atletas Cadastrados</h2>
+            <p> Os atletas são exibidos automaticamente ao abrir a página</p>
+            <p id="resposta"></p>
+            <ul id="lista-atletas"></ul>
+        </section>
+      </section>
+    </main>
+
+
+    <!--Modelo para op JS copiar cada atleta-->
+    <template id="modelo-atleta">
+     <li>
+        <section class="card-capa">
+        <span class="sem-imagem">Imagem indisponível</span>
+        <img alt="" />
+        </section>
+
+        <section class="card-conteudo">
+        <h3></h3>
+        <p><strong>Pais:</strong> <span class="pais"></span></p>
+        <p><strong>Idade:</strong> <span class="idade"></span></p>
+        <p><strong>Conquistas:</strong> <span class="conquistas"></span></p>
+        </section>
+    </li>
+    </template>
+   </body>
+</html>

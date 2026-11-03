@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: #e0f2fe;
+  background-color: #b0a0b677;
   color: #172554;
   font-family: Arial, sans-serif;
   padding: 20px;
@@ -13,13 +13,13 @@ body {
 
 header,
 footer {
-  background-color: #1d4ed8;
-  color: white;
+  background-color: #c3a3ce77;
+  color: rgba(71, 19, 60, 0.872);
   padding: 20px;
 }
 
 main {
-  background-color: white;
+  background-color: rgba(221, 227, 248, 0.696);
   margin: 20px auto;
   max-width: 500px;
   padding: 20px;
